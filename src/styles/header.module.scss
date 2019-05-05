@@ -1,0 +1,68 @@
+@import "variables";
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+  font-size: 1.1rem;
+  box-shadow: $nav-shadow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    a {
+      color: $nav-link;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+    a:hover {
+      color: $nav-link-active;
+    }
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  .logoConatiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+
+  .iconContainer {
+    display: flex;
+    flex-direction: row;
+    a {
+      color: $nav-link;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+    a:hover {
+      color: $nav-link-active;
+    }
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+}
