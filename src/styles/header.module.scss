@@ -15,23 +15,64 @@
   left: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 100;
+
+  .navToggleContainer {
+    .navMenuIcon {
+      display: none;
+    }
+  }
 
   .linkContainer {
     display: flex;
     flex-direction: row;
-    a {
-      color: $nav-link;
-      text-decoration: none;
-      margin-right: 20px;
+    z-index: 200;
+    .navToggleInput {
+      display: none;
     }
-    a:last-child {
-      margin-right: 0;
-    }
-    a:hover {
-      color: $nav-link-active;
-    }
-    .icon {
-      font-size: 1.5rem;
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      .navCloseIcon {
+        display: none;
+      }
+      .link {
+        margin-right: 20px;
+        padding: 5px 10px;
+        position: relative;
+        a {
+          color: $nav-link;
+          text-decoration: none;
+          transition: color 0.3s;
+          z-index: 100;
+          position: relative;
+        }
+        .linkBg {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 80;
+          background-color: $primary-blue;
+          background-image: linear-gradient($primary-blue, $primary-purple);
+          transform: scale(0, 1);
+          transform-origin: left;
+          transition: transform 0.3s;
+          border-radius: 2px;
+        }
+      }
+      .link:last-child {
+        margin-right: 0;
+      }
+      .link:hover a {
+        color: $nav-link-hover;
+      }
+      .link:hover .linkBg {
+        transform: scale(1, 1);
+      }
     }
   }
 
@@ -51,7 +92,7 @@
     display: flex;
     flex-direction: row;
     a {
-      color: $nav-link;
+      color: $nav-icon;
       text-decoration: none;
       margin-right: 40px;
     }
@@ -59,10 +100,66 @@
       margin-right: 0;
     }
     a:hover {
-      color: $nav-link-active;
+      color: $nav-icon-hover;
     }
     .icon {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 20px;
+    .linkContainer {
+      .navToggleContainer {
+        .navMenuIcon {
+          display: block;
+        }
+      }
+      .links {
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        min-height: 100vh;
+        left: -100%;
+        top: 0;
+        padding: 40px;
+        box-shadow: $nav-shadow;
+        .navCloseIcon {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 10px;
+        }
+        .link {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        .link:first-child {
+          margin-top: 40px;
+        }
+      }
+
+      .navToggleInput:checked ~ .links {
+        left: 0;
+      }
+    }
+
+    .logoConatiner {
+      img {
+        height: 25px;
+      }
+    }
+
+    .iconContainer {
+      a {
+        margin-right: 10px;
+      }
+      .icon {
+        font-size: 1.2rem;
+      }
     }
   }
 }
