@@ -10,7 +10,7 @@ import {
 import styles from "../styles/header.module.scss"
 import logo from "../images/Logo.png"
 
-export default class header extends Component {
+export default class Header extends Component {
   render() {
     return (
       <nav className={styles.container}>

@@ -126,6 +126,7 @@
         top: 0;
         padding: 40px;
         box-shadow: $nav-shadow;
+        transition: left 0.5s;
         .navCloseIcon {
           display: block;
           position: absolute;

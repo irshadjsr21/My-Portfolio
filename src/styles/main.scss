@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 @import "variables";
 
 body {
@@ -10,4 +11,14 @@ body {
 
 .clickable {
   cursor: pointer;
+}
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }

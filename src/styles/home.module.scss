@@ -1,0 +1,69 @@
+@import "variables";
+
+.mainContainer {
+  background-image: url("../images//home-bg.jpg");
+  min-width: 100vw;
+  min-height: 100vh;
+  color: $text-light;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
+}
+
+.mainContent {
+  padding: 20px 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .textContainer {
+    flex: 1;
+    .greeting {
+      margin-bottom: 40px;
+      .hi {
+        font-size: 3.5rem;
+      }
+      .name {
+        font-size: 4.5rem;
+      }
+    }
+    .introText {
+      font-size: 1.25rem;
+    }
+  }
+  .illustration {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    .textContainer {
+      .greeting {
+        .hi {
+          font-size: 2.5rem;
+        }
+        .name {
+          font-size: 3.5rem;
+        }
+      }
+      .introText {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    .textContainer {
+      margin-bottom: 20px;
+    }
+  }
+}
