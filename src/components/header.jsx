@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import {
   FaLinkedin,
   FaTwitter,
@@ -32,30 +32,30 @@ export default class Header extends Component {
             </label>
             <div className={styles.link + " clickable"}>
               <div className={styles.linkBg} />
-              <Link to="/">Home</Link>
+              <AnchorLink href="#home">Home</AnchorLink>
             </div>
             <div className={styles.link + " clickable"}>
               <div className={styles.linkBg} />
-              <Link to="/">About</Link>
+              <AnchorLink href="#about">About</AnchorLink>
             </div>
             <div className={styles.link + " clickable"}>
               <div className={styles.linkBg} />
-              <Link to="/">Skills</Link>
+              <AnchorLink href="#skills">Skills</AnchorLink>
             </div>
             <div className={styles.link + " clickable"}>
               <div className={styles.linkBg} />
-              <Link to="/">Project</Link>
+              <AnchorLink href="#project">Project</AnchorLink>
             </div>
             <div className={styles.link + " clickable"}>
               <div className={styles.linkBg} />
-              <Link to="/">Contact</Link>
+              <AnchorLink href="#contact">Contact</AnchorLink>
             </div>
           </div>
         </div>
         <div className={styles.logoConatiner}>
-          <Link to="/">
+          <a href="#home">
             <img src={logo} alt="Irshad logo" />
-          </Link>
+          </a>
         </div>
         <div className={styles.iconContainer}>
           <a
