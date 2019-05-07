@@ -26,8 +26,20 @@
         "percentage": "80"
       },
       {
+        "name": "PHP",
+        "percentage": "40"
+      },
+      {
+        "name": "Laravel",
+        "percentage": "40"
+      },
+      {
         "name": "Java",
         "percentage": "50"
+      },
+      {
+        "name": "C",
+        "percentage": "30"
       }
     ]
   }

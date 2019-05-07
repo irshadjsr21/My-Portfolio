@@ -28,7 +28,7 @@ h4 {
   @extend .font-serif;
 }
 
-h1 {
+h2 {
   font-size: 2.5rem;
 }
 
@@ -40,6 +40,13 @@ h1 {
   padding: 40px;
   width: 80%;
   margin: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {

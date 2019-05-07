@@ -11,6 +11,25 @@ import styles from "../styles/header.module.scss"
 import logo from "../images/Logo.png"
 
 export default class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isNavbarOpen: false,
+    }
+  }
+
+  handleNavBarToggle = () => {
+    this.setState({
+      isNavbarOpen: !this.state.isNavbarOpen,
+    })
+  }
+
+  closeNavBar = () => {
+    this.setState({
+      isNavbarOpen: false,
+    })
+  }
+
   render() {
     return (
       <nav className={styles.container}>
@@ -20,36 +39,60 @@ export default class Header extends Component {
             name="nav-toggle"
             id="nav-toggle"
             className={styles.navToggleInput}
+            checked={this.state.isNavbarOpen}
+            onChange={this.handleNavBarToggle}
           />
           <div className={styles.navToggleContainer}>
-            <label htmlFor="nav-toggle">
-              <FaBars className={styles.navMenuIcon + " clickable"} />
-            </label>
+            <FaBars
+              className={styles.navMenuIcon + " clickable"}
+              onClick={this.handleNavBarToggle}
+            />
           </div>
           <div className={styles.links}>
-            <label htmlFor="nav-toggle">
-              <FaTimes className={styles.navCloseIcon + " clickable"} />
-            </label>
-            <div className={styles.link + " clickable"}>
+            <FaTimes
+              className={styles.navCloseIcon + " clickable"}
+              onClick={this.handleNavBarToggle}
+            />
+            <AnchorLink
+              className={styles.link + " clickable"}
+              onClick={this.closeNavBar}
+              href="#home"
+            >
               <div className={styles.linkBg} />
-              <AnchorLink href="#home">Home</AnchorLink>
-            </div>
-            <div className={styles.link + " clickable"}>
+              <div className={styles.linkText}>Home</div>
+            </AnchorLink>
+            <AnchorLink
+              className={styles.link + " clickable"}
+              onClick={this.closeNavBar}
+              href="#about"
+            >
               <div className={styles.linkBg} />
-              <AnchorLink href="#about">About</AnchorLink>
-            </div>
-            <div className={styles.link + " clickable"}>
+              <div className={styles.linkText}>About</div>
+            </AnchorLink>
+            <AnchorLink
+              className={styles.link + " clickable"}
+              onClick={this.closeNavBar}
+              href="#skills"
+            >
               <div className={styles.linkBg} />
-              <AnchorLink href="#skills">Skills</AnchorLink>
-            </div>
-            <div className={styles.link + " clickable"}>
+              <div className={styles.linkText}>Skills</div>
+            </AnchorLink>
+            <AnchorLink
+              className={styles.link + " clickable"}
+              onClick={this.closeNavBar}
+              href="#project"
+            >
               <div className={styles.linkBg} />
-              <AnchorLink href="#project">Project</AnchorLink>
-            </div>
-            <div className={styles.link + " clickable"}>
+              <div className={styles.linkText}>Project</div>
+            </AnchorLink>
+            <AnchorLink
+              className={styles.link + " clickable"}
+              onClick={this.closeNavBar}
+              href="#contact"
+            >
               <div className={styles.linkBg} />
-              <AnchorLink href="#contact">Contact</AnchorLink>
-            </div>
+              <div className={styles.linkText}>Contact</div>
+            </AnchorLink>
           </div>
         </div>
         <div className={styles.logoConatiner}>
@@ -62,13 +105,19 @@ export default class Header extends Component {
             href="https://www.linkedin.com/in/irshad-ansari-aa094216b/"
             target="_black"
           >
-            <FaLinkedin className={styles.icon} />
+            <div className={styles.icon}>
+              <FaLinkedin />
+            </div>
           </a>
           <a href="https://twitter.com/irshadansari7" target="_black">
-            <FaTwitter className={styles.icon} />
+            <div className={styles.icon}>
+              <FaTwitter />
+            </div>
           </a>
           <a href="mailto:irshadjsr21@gmail.com" target="_black">
-            <FaEnvelope className={styles.icon} />
+            <div className={styles.icon}>
+              <FaEnvelope />
+            </div>
           </a>
         </div>
       </nav>

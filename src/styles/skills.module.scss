@@ -7,8 +7,13 @@
     justify-content: space-between;
     margin-bottom: 20px;
 
+    .skillName {
+      flex: 1;
+    }
+
     .skillBar {
-      width: 800px;
+      flex: 4;
+      width: 100%;
       height: 30px;
       border-radius: 15px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -32,5 +37,29 @@
 
   .skill:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsList {
+    .skill {
+      .skillName {
+        flex: 2;
+      }
+      .skillBar {
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .skillsList {
+    .skill {
+      flex-direction: column;
+      .skillName {
+        margin-bottom: 2px;
+      }
+    }
   }
 }

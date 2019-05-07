@@ -10,8 +10,8 @@ export default function Home() {
       <div className={styles.mainContent}>
         <div className={styles.textContainer}>
           <div className={styles.greeting + " font-serif"}>
-            <div className={styles.hi}>{data.headerText1}</div>
-            <div className={styles.name}>{data.headerText2}</div>
+            <h2 className={styles.hi}>{data.headerText1}</h2>
+            <h1 className={styles.name}>{data.headerText2}</h1>
           </div>
           <div className={styles.introText}>{data.introText}</div>
         </div>

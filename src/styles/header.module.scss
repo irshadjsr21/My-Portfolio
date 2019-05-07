@@ -38,13 +38,13 @@
         display: none;
       }
       .link {
-        margin-right: 20px;
-        padding: 5px 10px;
+        margin-right: 10px;
         position: relative;
-        a {
-          color: $nav-link;
-          text-decoration: none;
-          transition: color 0.3s;
+        padding: 5px 10px;
+        color: $nav-link;
+        text-decoration: none;
+        transition: color 0.3s;
+        .linkText {
           z-index: 100;
           position: relative;
         }
@@ -57,7 +57,11 @@
           height: 100%;
           z-index: 80;
           background-color: $primary-blue;
-          background-image: linear-gradient($primary-blue, $primary-purple);
+          background-image: linear-gradient(
+            90deg,
+            $primary-blue,
+            $primary-purple
+          );
           transform: scale(0, 1);
           transform-origin: left;
           transition: transform 0.3s;
@@ -67,7 +71,7 @@
       .link:last-child {
         margin-right: 0;
       }
-      .link:hover a {
+      .link:hover {
         color: $nav-link-hover;
       }
       .link:hover .linkBg {
@@ -101,14 +105,32 @@
     }
     a:hover {
       color: $nav-icon-hover;
+      .icon {
+        transform: rotateY(360deg) scale(1.25, 1.25);
+      }
     }
     .icon {
       font-size: 1.5rem;
+      transition: transform 0.5s;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .container {
+    .linkContainer {
+      .links {
+        margin-right: 5px;
+        padding: 5px;
+        a {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
   .container {
     padding: 15px 20px;
     .linkContainer {
