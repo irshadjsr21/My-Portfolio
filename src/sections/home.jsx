@@ -16,7 +16,7 @@ export default function Home() {
           <div className={styles.introText}>{data.introText}</div>
         </div>
         <div className={styles.illustration}>
-          <img src={illustration} alt="" />
+          <img src={illustration} alt="Onboarding illustration" />
         </div>
       </div>
     </section>

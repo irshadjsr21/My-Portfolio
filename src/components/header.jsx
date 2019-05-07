@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa"
 import styles from "../styles/header.module.scss"
 import logo from "../images/Logo.png"
+import { getSocialLinks } from "../services/links"
 
 export default class Header extends Component {
   constructor(props) {
@@ -100,27 +101,34 @@ export default class Header extends Component {
             <img src={logo} alt="Irshad logo" />
           </a>
         </div>
-        <div className={styles.iconContainer}>
-          <a
-            href="https://www.linkedin.com/in/irshad-ansari-aa094216b/"
-            target="_black"
-          >
-            <div className={styles.icon}>
-              <FaLinkedin />
-            </div>
-          </a>
-          <a href="https://twitter.com/irshadansari7" target="_black">
-            <div className={styles.icon}>
-              <FaTwitter />
-            </div>
-          </a>
-          <a href="mailto:irshadjsr21@gmail.com" target="_black">
-            <div className={styles.icon}>
-              <FaEnvelope />
-            </div>
-          </a>
-        </div>
+        <IconContainer />
       </nav>
     )
   }
+}
+
+const IconContainer = () => {
+  const links = getSocialLinks() || {}
+  return (
+    <div className={styles.iconContainer}>
+      <a href={links.linkedIn} target="_black" rel="noopener">
+        <div className={styles.icon}>
+          <FaLinkedin />
+        </div>
+        <div className={styles.iconText}>LinkedIn</div>
+      </a>
+      <a href={links.twitter} target="_black" rel="noopener">
+        <div className={styles.icon}>
+          <FaTwitter />
+        </div>
+        <div className={styles.iconText}>Twitter</div>
+      </a>
+      <a href={links.email} target="_black" rel="noopener">
+        <div className={styles.icon}>
+          <FaEnvelope />
+        </div>
+        <div className={styles.iconText}>Email</div>
+      </a>
+    </div>
+  )
 }

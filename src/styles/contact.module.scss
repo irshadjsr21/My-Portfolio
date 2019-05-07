@@ -1,0 +1,59 @@
+@import "variables";
+
+.container {
+  background-color: $bg-dark;
+  width: 100%;
+  color: $text-light;
+
+  .text {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 80px 0;
+  }
+
+  .iconConatiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $text-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s;
+    }
+
+    .icon {
+      height: 100px;
+      width: auto;
+      margin-bottom: 2px;
+    }
+
+    a:hover {
+      color: $primary-purple;
+
+      transform: scale(1.25, 1.25);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .text {
+      font-size: 1.15rem;
+    }
+    .iconConatiner {
+      flex-wrap: wrap;
+      a {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      .icon {
+        height: 60px;
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "../styles/skills.module.scss"
 import SkillsList from "../components/skillsList"
 import { getSkillsList } from "../services/skill"
 
