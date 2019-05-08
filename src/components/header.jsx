@@ -95,6 +95,7 @@ export default class Header extends Component {
               <div className={styles.linkText}>Contact</div>
             </AnchorLink>
           </div>
+          <div className={styles.overlay} onClick={this.closeNavBar} />
         </div>
         <div className={styles.logoConatiner}>
           <a href="#home">

@@ -37,8 +37,9 @@ h2 {
 }
 
 .container {
-  padding: 40px;
-  width: 80%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 60%;
   margin: auto;
   box-sizing: border-box;
 }
@@ -47,10 +48,16 @@ h2 {
   html {
     font-size: 15px;
   }
+  .container {
+    width: 70%;
+  }
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 14px;
+  }
+  .container {
+    width: 80%;
   }
 }

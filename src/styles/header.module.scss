@@ -78,6 +78,10 @@
         transform: scale(1, 1);
       }
     }
+
+    .overlay {
+      display: none;
+    }
   }
 
   .logoConatiner {
@@ -114,11 +118,11 @@
       }
     }
     .icon {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       transition: transform 0.5s;
     }
     .iconText {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -151,17 +155,22 @@
         flex-direction: column;
         background-color: white;
         min-height: 100vh;
-        left: -100%;
+        left: -120%;
         top: 0;
         padding: 40px;
         box-shadow: $nav-shadow;
-        transition: left 0.5s;
+        transition: left $nav-animation-delay, transform $nav-animation-delay;
+        transition-delay: 0.2s;
+        transform: skew(-30deg);
+        z-index: 10;
         .navCloseIcon {
           display: block;
           position: absolute;
           top: 0;
           right: 0;
           padding: 10px;
+          transform: rotate(0deg);
+          transition: transform $nav-animation-delay * 2;
         }
         .link {
           margin-right: 0;
@@ -172,8 +181,28 @@
         }
       }
 
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
+        opacity: 0.25;
+        z-index: 9;
+      }
+
       .navToggleInput:checked ~ .links {
         left: 0;
+        transform: skew(0deg);
+        .navCloseIcon {
+          transform: rotate(360deg);
+        }
+      }
+
+      .navToggleInput:checked ~ .overlay {
+        display: block;
       }
     }
 
@@ -184,11 +213,31 @@
     }
 
     .iconContainer {
+      .icon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .iconContainer {
       a {
         margin-right: 10px;
       }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    .iconContainer {
       .icon {
-        font-size: 1.2rem;
+        font-size: 1.35rem;
+      }
+      .iconText {
+        font-size: 0.6rem;
       }
     }
   }
