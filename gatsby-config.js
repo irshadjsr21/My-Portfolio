@@ -3,7 +3,7 @@ const config = {
     title: "Irshad Ansari",
     description: "Hi! I'm Irshad Ansari, a web developer.",
     url: "https://www.imirshad.com",
-    image: "/favicon.ico",
+    image: "/favicon.png",
     twitterUsername: "@irshadansari7",
   },
   plugins: [
