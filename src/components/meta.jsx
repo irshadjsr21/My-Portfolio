@@ -20,10 +20,11 @@ export default function Meta() {
       <meta name="revisit-after" content="30 days" />
 
       <meta property="og:url" content={url} />
-      <meta property="og:type" content="Web developer portfolio" />
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="fb:app_id" content="400959247410317" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={twitterUsername} />
