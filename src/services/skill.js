@@ -11,7 +11,10 @@ export const getSkillsList = () => {
               skill {
                 skills {
                   name
-                  percentage
+                  list {
+                    name
+                    percentage
+                  }
                 }
               }
             }
