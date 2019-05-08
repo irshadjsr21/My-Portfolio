@@ -2,44 +2,54 @@
   "skill": {
     "skills": [
       {
-        "name": "HTML",
-        "percentage": "80"
+        "name": "Programming Languages",
+        "list": [
+          {
+            "name": "HTML",
+            "percentage": "80"
+          },
+          {
+            "name": "CSS",
+            "percentage": "60"
+          },
+          {
+            "name": "JavaScript",
+            "percentage": "80"
+          },
+          {
+            "name": "PHP",
+            "percentage": "40"
+          },
+          {
+            "name": "Java",
+            "percentage": "50"
+          },
+          {
+            "name": "C",
+            "percentage": "30"
+          }
+        ]
       },
       {
-        "name": "CSS",
-        "percentage": "60"
-      },
-      {
-        "name": "JavaScript",
-        "percentage": "80"
-      },
-      {
-        "name": "React.js",
-        "percentage": "50"
-      },
-      {
-        "name": "Angular 2+",
-        "percentage": "80"
-      },
-      {
-        "name": "Node.js (Server)",
-        "percentage": "80"
-      },
-      {
-        "name": "PHP",
-        "percentage": "40"
-      },
-      {
-        "name": "Laravel",
-        "percentage": "40"
-      },
-      {
-        "name": "Java",
-        "percentage": "50"
-      },
-      {
-        "name": "C",
-        "percentage": "30"
+        "name": "Web Technologies",
+        "list": [
+          {
+            "name": "React.js",
+            "percentage": "50"
+          },
+          {
+            "name": "Angular 2+",
+            "percentage": "80"
+          },
+          {
+            "name": "Node.js (Server)",
+            "percentage": "80"
+          },
+          {
+            "name": "Laravel",
+            "percentage": "40"
+          }
+        ]
       }
     ]
   }

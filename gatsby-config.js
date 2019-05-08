@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   siteMetadata: {
     title: "Irshad Ansari",
     description: "Hi! I'm Irshad Ansari, a web developer.",
@@ -54,3 +54,15 @@ module.exports = {
     },
   ],
 }
+
+if (process.env.CONTEXT === "production") {
+  const googleAnalyticsCfg = {
+    resolve: "gatsby-plugin-google-analytics",
+    options: {
+      trackingId: "UA-139804245-1",
+    },
+  }
+  config.plugins.push(googleAnalyticsCfg)
+}
+
+module.exports = config

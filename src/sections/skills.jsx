@@ -7,7 +7,9 @@ export default function Skills() {
   return (
     <section className="container" id="skills">
       <h2 className="text-center">My Skills</h2>
-      <SkillsList skills={skills} />
+      {skills.map(skill => (
+        <SkillsList title={skill.name} skills={skill.list} key={skill.name} />
+      ))}
     </section>
   )
 }

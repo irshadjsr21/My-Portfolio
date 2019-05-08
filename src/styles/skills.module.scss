@@ -1,65 +1,78 @@
 @import "variables";
 
-.skillsList {
-  margin-bottom: 20px;
-  .skill {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.skillsContainer {
+  margin-bottom: 60px;
+  .skillsTitle {
+    margin-bottom: 40px;
+  }
+  .skillsList {
     margin-bottom: 20px;
+    .skill {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
 
-    .skillName {
-      flex: 1;
-    }
+      .skillName {
+        flex: 1;
+      }
 
-    .skillBar {
-      flex: 4;
-      width: 100%;
-      height: 30px;
-      border-radius: 15px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      background-color: white;
-      position: relative;
-
-      .skillBarFiller {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
+      .skillBar {
+        flex: 4;
+        width: 100%;
+        height: 30px;
         border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $text-light;
-        background-color: $primary-purple;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        background-color: white;
+        position: relative;
+
+        .skillBarFiller {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $text-light;
+          background-color: $primary-purple;
+        }
       }
     }
-  }
 
-  .skill:last-child {
-    margin-bottom: 0;
+    .skill:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .skillsList {
-    .skill {
-      .skillName {
-        flex: 2;
-      }
-      .skillBar {
-        height: 20px;
+  .skillsContainer {
+    .skillsTitle {
+      margin-bottom: 20px;
+    }
+    .skillsList {
+      .skill {
+        .skillName {
+          flex: 2;
+        }
+        .skillBar {
+          height: 20px;
+        }
       }
     }
   }
 }
 
 @media (max-width: 425px) {
-  .skillsList {
-    .skill {
-      flex-direction: column;
-      .skillName {
-        margin-bottom: 2px;
+  .skillsContainer {
+    .skillsList {
+      .skill {
+        flex-direction: column;
+        .skillName {
+          margin-bottom: 2px;
+        }
       }
     }
   }

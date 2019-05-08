@@ -1,5 +1,4 @@
 import { useStaticQuery, graphql } from "gatsby"
-import formatData from "../utils/formatData"
 
 export const getMetaData = () => {
   const data = useStaticQuery(
