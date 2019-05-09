@@ -27,6 +27,8 @@ export default function Meta() {
       <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:image" content={image} />
+
+      <meta name="msvalidate.01" content="DBB2A0C996A4FC8857E6D5DA3A247985" />
     </Helmet>
   )
 }
