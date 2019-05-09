@@ -1,10 +1,14 @@
 const config = {
   siteMetadata: {
-    title: "Irshad Ansari",
-    description: "Hi! I'm Irshad Ansari, a web developer.",
-    url: "https://www.imirshad.com",
-    image: "https://www.imirshad.com/favicon.png",
+    title:
+      "Md. Irshad Ansari - web developer / designer / programmer based near Bangalore",
+    description:
+      "Hi! I'm Mohammad Irshad Ansari, a self taught web developer / designer / programmer based near Bangalore, India. I'm open to work in office as well as remotely. Wanna hire? Wanna collab on a side project? Wanna hire as a free lancer? Contact me at irshadjsr21@gmail.com",
+    url: "https://imirshad.com",
+    image: "https://imirshad.com/favicon.png",
     twitterUsername: "@irshadansari7",
+    keywords:
+      "web developer, mohammad irshad ansari, web developer bangalore, web developer jamshedpur, web designer jamshedpur, web designer jamshedpur, mohammad irshad ansari web developer, mohammad irshad ansari web designer, affordable website design, affordable web design, affordable website development, cheap website design, cheap website development",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

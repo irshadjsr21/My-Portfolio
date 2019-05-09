@@ -1,50 +1,22 @@
 import React from "react"
-import ScrollAnimation from "react-animate-on-scroll"
 import styles from "../styles/home.module.scss"
 import illustration from "../images/onboarding.svg"
-import { getTextContents } from "../services/home"
+import { getData } from "../services/home"
 
 export default function Home() {
-  const data = getTextContents()
+  const { textContents, anchor } = getData()
   return (
-    <section className={styles.mainContainer} id="home">
+    <section className={styles.mainContainer} id={anchor}>
       <div className={styles.mainContent}>
         <div className={styles.textContainer}>
           <div className={styles.greeting + " font-serif"}>
-            <ScrollAnimation
-              animateIn="fadeInLeft"
-              duration={0.8}
-              animateOnce={true}
-            >
-              <h2 className={styles.hi}>{data.headerText1}</h2>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateIn="fadeInLeft"
-              duration={0.8}
-              animateOnce={true}
-              delay={500}
-            >
-              <h1 className={styles.name}>{data.headerText2}</h1>
-            </ScrollAnimation>
+            <h2 className={styles.hi}>{textContents.headerText1}</h2>
+            <h1 className={styles.name}>{textContents.headerText2}</h1>
           </div>
-          <ScrollAnimation
-            animateIn="fadeInLeft"
-            duration={0.8}
-            animateOnce={true}
-            delay={1000}
-          >
-            <div className={styles.introText}>{data.introText}</div>
-          </ScrollAnimation>
+          <div className={styles.introText}>{textContents.introText}</div>
         </div>
         <div className={styles.illustration}>
-          <ScrollAnimation
-            animateIn="fadeInRight"
-            duration={0.8}
-            animateOnce={true}
-            delay={1500}
-          >
-            <img src={illustration} alt="Onboarding illustration" />
-          </ScrollAnimation>
+          <img src={illustration} alt="Onboarding illustration" />
         </div>
       </div>
     </section>

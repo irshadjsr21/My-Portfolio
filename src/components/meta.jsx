@@ -4,16 +4,13 @@ import { getMetaData } from "../services/meta"
 
 export default function Meta() {
   const data = getMetaData()
-  const { title, description, url, image, twitterUsername } = data
+  const { title, description, url, image, twitterUsername, keywords } = data
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta
-        name="keywords"
-        content="web developer, irshad, ansari, irshad ansari"
-      />
+      <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
@@ -23,16 +20,13 @@ export default function Meta() {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image:url" content={image} />
       <meta property="fb:app_id" content="400959247410317" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:creator" content={twitterUsername} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
   )
 }

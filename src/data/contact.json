@@ -1,5 +1,7 @@
 {
   "contact": {
-    "contactText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum,non eaque suscipit repudiandae itaque consequatur ullam? Pariatur, velitrepellendus."
+    "title": "Contact",
+    "contactText": "Wanna hire..? Wanna collab on a side project..? Wanna hire as a free lancer..? <br> Contact me from any of the links below.",
+    "anchor": "contact"
   }
 }

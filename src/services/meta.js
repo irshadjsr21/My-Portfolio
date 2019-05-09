@@ -11,6 +11,7 @@ export const getMetaData = () => {
             url
             image
             twitterUsername
+            keywords
           }
         }
       }

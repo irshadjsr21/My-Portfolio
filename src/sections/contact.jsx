@@ -2,18 +2,19 @@ import React from "react"
 import ScrollAnimation from "react-animate-on-scroll"
 import styles from "../styles/contact.module.scss"
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa"
-import { getSocialLinks } from "../services/links"
-import { getContactText } from "../services/contact"
+import { getData } from "./../services/contact"
 
 export default function Contact() {
-  const links = getSocialLinks() || {}
-  const contactText = getContactText()
+  const { links, title, contactText, anchor } = getData()
   return (
-    <section className={styles.container} id="contact">
+    <section className={styles.container} id={anchor}>
       <div className="container">
-        <h2 className="text-center">Contact</h2>
+        <h2 className="text-center">{title}</h2>
 
-        <div className={styles.text}>{contactText}</div>
+        <div
+          className={styles.text}
+          dangerouslySetInnerHTML={{ __html: contactText }}
+        />
 
         <ScrollAnimation animateIn="flipInX">
           <div className={styles.iconConatiner}>

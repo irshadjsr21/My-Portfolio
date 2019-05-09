@@ -1,0 +1,18 @@
+{
+  "navBar": {
+    "links": [
+      {
+        "name": "Home",
+        "anchor": "home"
+      },
+      {
+        "name": "Skills",
+        "anchor": "skills"
+      },
+      {
+        "name": "Contact",
+        "anchor": "contact"
+      }
+    ]
+  }
+}

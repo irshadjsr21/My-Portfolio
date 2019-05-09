@@ -10,7 +10,7 @@ export default function Skill({ name, percentage }) {
     <div className={styles.skill}>
       <div className={styles.skillName}>{name}</div>
       <div className={styles.skillBar}>
-        <ScrollAnimation animateIn="skillBar">
+        <ScrollAnimation animateIn="skillBar" offset={800}>
           <div className={styles.skillBarFiller} style={progressBarStyle}>
             <div>{percentage}%</div>
           </div>

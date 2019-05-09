@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import formatData from "../utils/formatData"
 
-export const getSkillsList = () => {
+export const getData = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -9,6 +9,8 @@ export const getSkillsList = () => {
           edges {
             node {
               skill {
+                title
+                anchor
                 skills {
                   name
                   list {
@@ -23,7 +25,8 @@ export const getSkillsList = () => {
       }
     `
   )
-  const formattedData =
-    formatData({ data, file: "skill", object: "skills" }) || []
-  return formattedData
+  const skills = formatData({ data, file: "skill", object: "skills" }) || []
+  const title = formatData({ data, file: "skill", object: "title" }) || ""
+  const anchor = formatData({ data, file: "skill", object: "anchor" }) || ""
+  return { skills, title, anchor }
 }
