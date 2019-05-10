@@ -1,5 +1,6 @@
 import React from "react"
 import { FaGithub } from "react-icons/fa"
+import ScrollAnimation from "react-animate-on-scroll"
 import Carousel from "../components/carousel"
 import styles from "../styles/projects.module.scss"
 import { getData } from "../services/projects"
@@ -54,7 +55,9 @@ export default function projects() {
   return (
     <section id={anchor} className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
-      <Carousel items={list} render={renderMethod} backgroundColor="#eee" />
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+        <Carousel items={list} render={renderMethod} backgroundColor="#eee" />
+      </ScrollAnimation>
     </section>
   )
 }
