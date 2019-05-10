@@ -22,6 +22,10 @@
             "percentage": "40"
           },
           {
+            "name": "Dart",
+            "percentage": "40"
+          },
+          {
             "name": "Java",
             "percentage": "50"
           },
@@ -48,6 +52,10 @@
           },
           {
             "name": "Laravel",
+            "percentage": "40"
+          },
+          {
+            "name": "Flutter",
             "percentage": "40"
           }
         ]

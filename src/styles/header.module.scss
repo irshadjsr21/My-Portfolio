@@ -43,7 +43,7 @@
         padding: 5px 10px;
         color: $nav-link;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color $nav-animation-time;
         .linkText {
           z-index: 100;
           position: relative;
@@ -64,7 +64,7 @@
           );
           transform: scale(0, 1);
           transform-origin: left;
-          transition: transform 0.5s;
+          transition: transform $nav-animation-time;
           border-radius: 2px;
         }
       }
@@ -119,7 +119,7 @@
     }
     .icon {
       font-size: 1.25rem;
-      transition: transform 0.5s, color 0.5s;
+      transition: transform $nav-animation-time, color $nav-animation-time;
     }
     .iconText {
       font-size: 0.7rem;
@@ -159,7 +159,7 @@
         top: 0;
         padding: 40px;
         box-shadow: $nav-shadow;
-        transition: left $nav-animation-delay, transform $nav-animation-delay;
+        transition: left $nav-animation-time, transform $nav-animation-time;
         transition-delay: 0.2s;
         transform: skew(-30deg);
         z-index: 10;
@@ -170,7 +170,7 @@
           right: 0;
           padding: 10px;
           transform: rotate(0deg);
-          transition: transform $nav-animation-delay * 2;
+          transition: transform $nav-animation-time * 2;
         }
         .link {
           margin-right: 0;
@@ -188,7 +188,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #000000;
+        background-color: $nav-overlay-color;
         opacity: 0.25;
         z-index: 9;
       }
