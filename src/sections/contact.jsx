@@ -16,26 +16,32 @@ export default function Contact() {
           dangerouslySetInnerHTML={{ __html: contactText }}
         />
 
-        <ScrollAnimation animateIn="flipInX">
-          <div className={styles.iconConatiner}>
+        <div className={styles.iconConatiner}>
+          <ScrollAnimation animateIn="flipInX">
             <a target="_blank" href={links.linkedIn} rel="noopener noreferrer">
               <FaLinkedin className={styles.icon} />
               <div>LinkedIn</div>
             </a>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="flipInX" delay={250}>
             <a target="_blank" href={links.github} rel="noopener noreferrer">
               <FaGithub className={styles.icon} />
               <div>Github</div>
             </a>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="flipInX" delay={500}>
             <a target="_blank" href={links.twitter} rel="noopener noreferrer">
               <FaTwitter className={styles.icon} />
               <div>Twitter</div>
             </a>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="flipInX" delay={750}>
             <a target="_blank" href={links.email} rel="noopener noreferrer">
               <FaEnvelope className={styles.icon} />
               <div>Email</div>
             </a>
-          </div>
-        </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
       </div>
     </section>
   )

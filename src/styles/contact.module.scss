@@ -8,7 +8,7 @@
   .text {
     text-align: center;
     font-size: 1.25rem;
-    margin: 80px 0;
+    margin: 60px 0;
   }
 
   .iconConatiner {
@@ -23,7 +23,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: transform 0.5s;
+      transition: transform 0.5s, color 0.5s;
     }
 
     .icon {

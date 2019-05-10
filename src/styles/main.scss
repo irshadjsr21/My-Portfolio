@@ -43,6 +43,10 @@ h2 {
   width: 60%;
   margin: auto;
   box-sizing: border-box;
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 1024px) {

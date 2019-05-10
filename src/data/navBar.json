@@ -10,6 +10,10 @@
         "anchor": "skills"
       },
       {
+        "name": "Projects",
+        "anchor": "projects"
+      },
+      {
         "name": "Contact",
         "anchor": "contact"
       }

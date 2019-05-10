@@ -1,0 +1,145 @@
+@import "variables";
+
+.container {
+  background-color: #eee;
+  padding: 10px 0;
+
+  .title {
+    text-align: center;
+  }
+
+  .card {
+    width: 80%;
+    background-color: $text-light;
+    padding: 20px;
+    box-shadow: $nav-shadow;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .cardImageContainer {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cardImage {
+        height: 400px;
+        width: 100%;
+        background-color: #999;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .cardDetails {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .cardText {
+        .cardTitle {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        .cardPointsContainer {
+          margin: 20px 0;
+
+          .cardPoint {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .cardPointTitle {
+              font-weight: bold;
+              margin-right: 5px;
+            }
+          }
+
+          .cardPoint:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .cardLive {
+          margin-top: 40px;
+          margin-bottom: 10px;
+
+          a {
+            color: $text;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.5s;
+            font-weight: bold;
+          }
+
+          a:hover {
+            color: $primary-purple;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .cardRepo {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          color: $text;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.5s, color 0.5s;
+
+          .cardRepoIcon {
+            font-size: 2.5rem;
+          }
+
+          .cardRepoText {
+            font-size: 0.8rem;
+          }
+        }
+        a:hover {
+          color: $primary-purple;
+          transform: scale(1.25, 1.25);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    .card {
+      .cardImageContainer {
+        .cardImage {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .card {
+      flex-direction: column;
+      .cardImageContainer {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 40px;
+        .cardImage {
+          height: 100%;
+        }
+      }
+
+      .cardDetails {
+        width: 100%;
+      }
+    }
+  }
+}

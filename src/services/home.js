@@ -24,6 +24,6 @@ export const getData = () => {
   )
   const textContents =
     formatData({ data, file: "home", object: "textContents" }) || []
-  const anchor = formatData({ data, file: "home", object: "anchor" }) || []
+  const anchor = formatData({ data, file: "home", object: "anchor" }) || ""
   return { textContents, anchor }
 }
