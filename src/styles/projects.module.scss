@@ -142,6 +142,16 @@
 
       .cardDetails {
         width: 100%;
+
+        .cardText {
+          .cardTitle {
+            font-size: 1.5rem;
+          }
+
+          .cardLive {
+            font-size: 1.1rem;
+          }
+        }
       }
     }
   }

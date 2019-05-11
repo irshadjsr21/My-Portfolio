@@ -17,25 +17,25 @@ export default function Contact() {
         />
 
         <div className={styles.iconConatiner}>
-          <ScrollAnimation animateIn="flipInX">
+          <ScrollAnimation animateIn="flipInX" offset={1000}>
             <a target="_blank" href={links.linkedIn} rel="noopener noreferrer">
               <FaLinkedin className={styles.icon} />
               <div>LinkedIn</div>
             </a>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="flipInX" delay={250}>
+          <ScrollAnimation animateIn="flipInX" offset={1000} delay={250}>
             <a target="_blank" href={links.github} rel="noopener noreferrer">
               <FaGithub className={styles.icon} />
               <div>Github</div>
             </a>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="flipInX" delay={500}>
+          <ScrollAnimation animateIn="flipInX" offset={1000} delay={500}>
             <a target="_blank" href={links.twitter} rel="noopener noreferrer">
               <FaTwitter className={styles.icon} />
               <div>Twitter</div>
             </a>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="flipInX" delay={750}>
+          <ScrollAnimation animateIn="flipInX" offset={1000} delay={750}>
             <a target="_blank" href={links.email} rel="noopener noreferrer">
               <FaEnvelope className={styles.icon} />
               <div>Email</div>

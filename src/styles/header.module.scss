@@ -161,7 +161,6 @@
         box-shadow: $nav-shadow;
         transition: left $nav-animation-time, transform $nav-animation-time;
         transition-delay: 0.2s;
-        transform: skew(-30deg);
         z-index: 10;
         .navCloseIcon {
           display: block;
@@ -195,7 +194,6 @@
 
       .navToggleInput:checked ~ .links {
         left: 0;
-        transform: skew(0deg);
         .navCloseIcon {
           transform: rotate(360deg);
         }

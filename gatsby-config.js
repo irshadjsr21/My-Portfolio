@@ -1,9 +1,9 @@
 const config = {
   siteMetadata: {
     title:
-      "Md. Irshad Ansari - web developer / designer / programmer based near Bangalore",
+      "Md. Irshad Ansari - A web developer / designer / programmer based near Bangalore",
     description:
-      "Hi! I'm Mohammad Irshad Ansari, a self taught web developer / designer / programmer based near Bangalore, India. I'm open to work in office as well as remotely. Wanna hire? Wanna collab on a side project? Wanna hire as a free lancer? Contact me at irshadjsr21@gmail.com",
+      "Hi! I'm Mohammad Irshad Ansari, a self taught web developer / designer / programmer based near Bangalore, India. Wanna hire? Wanna collab on a side project? Need a website for a new business / startup? Contact me at irshadjsr21@gmail.com",
     url: "https://imirshad.com",
     image: "https://imirshad.com/favicon.png",
     twitterUsername: "@irshadansari7",
