@@ -1,5 +1,6 @@
 import React from "react"
 import { FaGithub } from "react-icons/fa"
+import LazyLoad from "react-lazy-load"
 import ScrollAnimation from "react-animate-on-scroll"
 import Carousel from "../components/carousel"
 import styles from "../styles/projects.module.scss"
@@ -10,10 +11,12 @@ export default function projects() {
   const renderMethod = item => (
     <div className={styles.card}>
       <div className={styles.cardImageContainer}>
-        <div
-          className={styles.cardImage}
-          style={{ backgroundImage: `url('${item.image}')` }}
-        />
+        <LazyLoad>
+          <div
+            className={styles.cardImage}
+            style={{ backgroundImage: `url('${item.image}')` }}
+          />
+        </LazyLoad>
       </div>
       <div className={styles.cardDetails}>
         <div className={styles.cardText}>
