@@ -13,8 +13,6 @@ class RenderHome extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      headerText1: "",
-      headerText2: "",
       introText: "",
       showCursor: {
         headerText1: false,
@@ -25,19 +23,9 @@ class RenderHome extends Component {
     }
     this.typeWriterObject = [
       {
-        name: "headerText1",
-        interval: 100,
-      },
-      {
-        name: "headerText2",
-        interval: 100,
-        spaceInterval: 200,
-        delay: 200,
-      },
-      {
         name: "introText",
         interval: 25,
-        spaceInterval: 200,
+        spaceInterval: 150,
         delay: 500,
       },
     ]
@@ -118,12 +106,10 @@ class RenderHome extends Component {
           <div className={styles.textContainer}>
             <div className={styles.greeting + " font-serif"}>
               <h2 className={styles.hi}>
-                {this.state.headerText1}
-                {this.state.showCursor.headerText1 && this.getCursor()}
+                {this.props.textContents.headerText1}
               </h2>
               <h1 className={styles.name}>
-                {this.state.headerText2}
-                {this.state.showCursor.headerText2 && this.getCursor()}
+                {this.props.textContents.headerText2}
               </h1>
             </div>
             <div className={styles.introText}>
