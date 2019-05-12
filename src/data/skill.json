@@ -40,14 +40,14 @@
         "list": [
           {
             "name": "Angular 2+",
-            "percentage": "90"
+            "percentage": "80"
           },
           {
             "name": "React.js",
             "percentage": "50"
           },
           {
-            "name": "Node.js (Server)",
+            "name": "Node.js (Express)",
             "percentage": "90"
           },
           {

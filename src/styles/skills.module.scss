@@ -59,6 +59,11 @@
         }
         .skillBar {
           height: 20px;
+          border-radius: 10px;
+
+          .skillBarFiller {
+            border-radius: 10px;
+          }
         }
       }
     }

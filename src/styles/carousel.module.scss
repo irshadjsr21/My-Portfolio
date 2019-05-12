@@ -44,6 +44,7 @@
         border-radius: 50%;
         background-color: $carousel-bubble;
         margin-right: 5px;
+        transition: background-color $default-animation-time;
 
         &.active {
           background-color: $carousel-bubble-active;

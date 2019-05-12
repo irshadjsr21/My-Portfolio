@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styles from "../styles/home.module.scss"
 import illustration from "../images/onboarding.svg"
 import { getData } from "../services/home"
-import { setInterval, clearInterval, setTimeout } from "timers"
+import { setTimeout } from "timers"
 
 export default function Home() {
   const { textContents, anchor } = getData()
@@ -16,11 +16,6 @@ class RenderHome extends Component {
       headerText1: "",
       headerText2: "",
       introText: "",
-      interval: {
-        headerText1: null,
-        headerText2: null,
-        introText: null,
-      },
       showCursor: {
         headerText1: false,
         headerText2: false,
@@ -31,16 +26,18 @@ class RenderHome extends Component {
     this.typeWriterObject = [
       {
         name: "headerText1",
-        interval: 200,
+        interval: 100,
       },
       {
         name: "headerText2",
         interval: 100,
+        spaceInterval: 200,
         delay: 200,
       },
       {
         name: "introText",
-        interval: 50,
+        interval: 25,
+        spaceInterval: 200,
         delay: 500,
       },
     ]
@@ -48,21 +45,28 @@ class RenderHome extends Component {
   }
 
   componentDidMount() {
-    this.startTimer()
+    this.startTypeWriter()
   }
 
-  startTimer = () => {
-    if (this.currentWriter >= this.typeWriterObject.length) {
-      this.setState({
-        animateIllustration: true,
-        showCursor: {
-          introText: true,
-        },
-      })
-      return
-    }
-
+  startTypeWriter = () => {
     const dataObj = this.typeWriterObject[this.currentWriter]
+    const done = () => {
+      if (this.currentWriter >= this.typeWriterObject.length) {
+        this.setState({
+          animateIllustration: true,
+          showCursor: {
+            introText: true,
+          },
+        })
+        return
+      }
+      this.startTypeWriter()
+    }
+    this.startTypingSection(dataObj, done)
+    this.currentWriter++
+  }
+
+  startTypingSection = (dataObj, done) => {
     const delay = dataObj.delay || 0
     const obj = this
     setTimeout(() => {
@@ -71,40 +75,36 @@ class RenderHome extends Component {
           [dataObj.name]: true,
         },
       })
-      const interval = setInterval(
-        () => obj.addWords(dataObj.name),
-        dataObj.interval
-      )
-      obj.setState({
-        interval: {
-          [dataObj.name]: interval,
-        },
-      })
-      obj.currentWriter++
+      const doneAddLetter = () => {
+        if (
+          this.state[dataObj.name].length >=
+          this.props.textContents[dataObj.name].length
+        ) {
+          done()
+          return
+        }
+        this.addLetter(dataObj, doneAddLetter)
+      }
+      obj.addLetter(dataObj, doneAddLetter)
     }, delay)
   }
 
-  addWords(text) {
-    if (this.state[text].length >= this.props.textContents[text].length) {
-      clearInterval(this.state.interval[text])
-      this.setState({
-        interval: {
-          [text]: null,
-        },
-        showCursor: {
-          [text]: false,
-        },
-      })
-      this.startTimer()
-    } else {
-      const txt = this.props.textContents[text].slice(
+  addLetter(dataObj, done) {
+    const obj = this
+    const delay =
+      obj.state[dataObj.name].endsWith(" ") && dataObj.spaceInterval
+        ? dataObj.spaceInterval
+        : dataObj.interval
+    setTimeout(() => {
+      const txt = obj.props.textContents[dataObj.name].slice(
         0,
-        this.state[text].length + 1
+        obj.state[dataObj.name].length + 1
       )
-      this.setState({
-        [text]: txt,
+      obj.setState({
+        [dataObj.name]: txt,
       })
-    }
+      done()
+    }, delay)
   }
 
   getCursor = () => {
