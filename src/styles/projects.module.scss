@@ -26,8 +26,9 @@
       align-items: center;
       div {
         width: 100%;
+        height: 400px;
         .cardImage {
-          height: 400px;
+          height: 100%;
           width: 100%;
           background-color: #999;
           background-position: center;
@@ -121,8 +122,12 @@
   .container {
     .card {
       .cardImageContainer {
-        .cardImage {
+        div {
           height: 350px;
+
+          .cardImage {
+            height: 100%;
+          }
         }
       }
     }
@@ -140,8 +145,11 @@
         width: 100%;
         height: 200px;
         margin-bottom: 40px;
-        .cardImage {
+        div {
           height: 100%;
+          .cardImage {
+            height: 100%;
+          }
         }
       }
 
