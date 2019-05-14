@@ -27,13 +27,13 @@
         "points": [
           {
             "title": "Technologies Used :",
-            "text": " HTML, CSS, Bootstrap, Angular 6, Node (Express)"
+            "text": " HTML, CSS, Bootstrap, Angular 6, Node (Express), MongoDB"
           }
         ]
       },
       {
         "name": "A Portfolio + Blog for a friend",
-        "description": "A custom designed static blogging website made with HUGO and integrated with Netlify CMS which makes adding new posts a breeze.",
+        "description": "A custom designed static blogging website made with HUGO and integrated with Netlify CMS which makes adding new blog posts a breeze.",
         "image": "/varun.png",
         "points": [
           {

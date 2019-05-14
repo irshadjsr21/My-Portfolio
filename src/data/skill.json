@@ -22,16 +22,8 @@
             "percentage": "40"
           },
           {
-            "name": "Dart",
-            "percentage": "40"
-          },
-          {
             "name": "Java",
             "percentage": "50"
-          },
-          {
-            "name": "C",
-            "percentage": "30"
           }
         ]
       },
@@ -57,6 +49,19 @@
           {
             "name": "Flutter",
             "percentage": "40"
+          }
+        ]
+      },
+      {
+        "name": "Databases",
+        "list": [
+          {
+            "name": "My SQL",
+            "percentage": "70"
+          },
+          {
+            "name": "MongoDB",
+            "percentage": "70"
           }
         ]
       },
