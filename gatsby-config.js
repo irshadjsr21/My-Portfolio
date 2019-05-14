@@ -8,7 +8,7 @@ const config = {
     image: "https://imirshad.com/favicon.png",
     twitterUsername: "@irshadansari7",
     keywords:
-      "web developer, mohammad irshad ansari, web developer bangalore, web developer jamshedpur, web designer jamshedpur, web designer jamshedpur, mohammad irshad ansari web developer, mohammad irshad ansari web designer, affordable website design, affordable web design, affordable website development, cheap website design, cheap website development",
+      "web developer, mohammad irshad ansari, web developer bangalore, web developer jamshedpur, web designer jamshedpur, web designer jamshedpur, mohammad irshad ansari web developer, mohammad irshad ansari web designer, affordable website design, affordable web design, affordable website development, cheap website design, cheap website development, imirshad",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
