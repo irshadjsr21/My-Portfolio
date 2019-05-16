@@ -7,7 +7,7 @@
         "list": [
           {
             "name": "HTML",
-            "percentage": "90"
+            "percentage": "80"
           },
           {
             "name": "CSS",
@@ -15,15 +15,15 @@
           },
           {
             "name": "JavaScript",
-            "percentage": "90"
+            "percentage": "80"
           },
           {
             "name": "PHP",
-            "percentage": "40"
+            "percentage": "35"
           },
           {
             "name": "Java",
-            "percentage": "50"
+            "percentage": "40"
           }
         ]
       },
@@ -40,7 +40,7 @@
           },
           {
             "name": "Node.js (Express)",
-            "percentage": "90"
+            "percentage": "80"
           },
           {
             "name": "Laravel",
@@ -57,11 +57,11 @@
         "list": [
           {
             "name": "My SQL",
-            "percentage": "70"
+            "percentage": "60"
           },
           {
             "name": "MongoDB",
-            "percentage": "70"
+            "percentage": "60"
           }
         ]
       },
@@ -73,6 +73,33 @@
             "percentage": "60"
           }
         ]
+      }
+    ],
+    "levels": [
+      {
+        "min": 0,
+        "max": 20,
+        "name": "Beginner"
+      },
+      {
+        "min": 20,
+        "max": 40,
+        "name": "Novice"
+      },
+      {
+        "min": 40,
+        "max": 60,
+        "name": "Intermediate"
+      },
+      {
+        "min": 60,
+        "max": 80,
+        "name": "Advanced"
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "name": "Expert"
       }
     ],
     "anchor": "skills"

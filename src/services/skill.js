@@ -18,6 +18,11 @@ export const getData = () => {
                     percentage
                   }
                 }
+                levels {
+                  max
+                  min
+                  name
+                }
               }
             }
           }
@@ -26,7 +31,8 @@ export const getData = () => {
     `
   )
   const skills = formatData({ data, file: "skill", object: "skills" }) || []
+  const levels = formatData({ data, file: "skill", object: "levels" }) || []
   const title = formatData({ data, file: "skill", object: "title" }) || ""
   const anchor = formatData({ data, file: "skill", object: "anchor" }) || ""
-  return { skills, title, anchor }
+  return { skills, title, anchor, levels }
 }

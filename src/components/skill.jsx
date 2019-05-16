@@ -2,7 +2,7 @@ import React from "react"
 import ScrollAnimation from "react-animate-on-scroll"
 import styles from "../styles/skills.module.scss"
 
-export default function Skill({ name, percentage }) {
+export default function Skill({ name, percentage, percentageText }) {
   const progressBarStyle = {
     width: percentage + "%",
   }
@@ -12,7 +12,7 @@ export default function Skill({ name, percentage }) {
       <div className={styles.skillBar}>
         <ScrollAnimation animateIn="skillBar" offset={800}>
           <div className={styles.skillBarFiller} style={progressBarStyle}>
-            <div>{percentage}%</div>
+            <div>{percentageText}</div>
           </div>
         </ScrollAnimation>
       </div>
