@@ -15,7 +15,7 @@
           },
           {
             "name": "JavaScript",
-            "percentage": "80"
+            "percentage": "85"
           },
           {
             "name": "PHP",
@@ -36,11 +36,15 @@
           },
           {
             "name": "React.js",
-            "percentage": "50"
+            "percentage": "70"
+          },
+          {
+            "name": "Vuejs",
+            "percentage": "70"
           },
           {
             "name": "Node.js (Express)",
-            "percentage": "80"
+            "percentage": "85"
           },
           {
             "name": "Laravel",
