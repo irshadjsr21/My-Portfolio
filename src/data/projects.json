@@ -4,6 +4,22 @@
     "anchor": "projects",
     "list": [
       {
+        "name": "Shark Validator",
+        "description": "A simple and light weight Javascript schema validator for browser and Nodejs which supports tree shaking feature.",
+        "image": "/shark_validator.png",
+        "github": "https://github.com/irshadjsr21/Shark-Validator",
+        "points": [
+          {
+            "title": "Technologies Used :",
+            "text": "JavaScript"
+          }
+        ],
+        "live": {
+          "text": "Check it out in NPM",
+          "link": "https://www.npmjs.com/package/shark-validator"
+        }
+      },
+      {
         "name": "Some Browser Games",
         "description": "Just a few games I created while learning JavaScript. Everything is written in vanilla JS without any game engine. (Note: Only compatable with PC, not mobile friendly)",
         "image": "/JSGames.png",
