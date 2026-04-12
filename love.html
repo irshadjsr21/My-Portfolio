@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Happy Birthday, Sadiya 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blush:     #f5d0d8;
+  --rose:      #e8a0b0;
+  --deep-rose: #c4687c;
+  --petal:     #fce8ec;
+  --ivory:     #fdf6f0;
+  --cream:     #f9ede5;
+  --muted:     #9e7a7a;
+  --text:      #4a2c2c;
+  --text-light:#7a5252;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Petals ── */
+.petals-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  top: -60px;
+  border-radius: 150% 0 150% 0;
+  opacity: 0;
+  animation: fallPetal linear infinite;
+}
+@keyframes fallPetal {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  5%   { opacity: 0.65; }
+  90%  { opacity: 0.35; }
+  100% { transform: translateY(110vh) translateX(80px) rotate(600deg); opacity: 0; }
+}
+
+/* ── Page wrapper ── */
+.page { position: relative; z-index: 1; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(170deg, #fce8ec 0%, #fdf6f0 55%, #f5d0d8 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228,160,176,0.18) 0%, transparent 70%);
+  top: -80px; right: -80px;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--deep-rose);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.3s;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.4rem, 16vw, 6rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--text);
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards 0.6s;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--deep-rose);
+  display: block;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 13vw, 5rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--deep-rose);
+  letter-spacing: 0.03em;
+  margin-top: 0.15em;
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards 1s;
+}
+.hero-divider {
+  width: 70px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rose), transparent);
+  margin: 1.8rem auto;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.5s;
+}
+.hero-sub {
+  font-size: 0.82rem;
+  font-weight: 200;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.8s;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 2.6s;
+}
+.hero-scroll span {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 36px;
+  background: linear-gradient(to bottom, var(--rose), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+/* ── Message ── */
+.message-section {
+  background: var(--cream);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.9rem;
+}
+.message-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 2;
+  color: var(--text-light);
+  max-width: 540px;
+  margin: 0 auto;
+}
+.message-sign {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ── Photo story ── */
+.gallery-section {
+  padding: 4rem 1.5rem;
+  background: var(--ivory);
+}
+.gallery-header { text-align: center; margin-bottom: 2rem; }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 8vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text);
+}
+.section-title em { font-style: italic; color: var(--deep-rose); }
+
+.photo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.photo-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(196,104,124,0.13);
+}
+.photo-frame:nth-child(odd)  { aspect-ratio: 4/5; }
+.photo-frame:nth-child(even) { aspect-ratio: 3/4; }
+.photo-frame:nth-child(3)    { aspect-ratio: 1/1; }
+
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.photo-frame:active img { transform: scale(1.03); }
+
+.photo-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2.5rem 1.2rem 1.1rem;
+  background: linear-gradient(to top, rgba(74,44,44,0.55) 0%, transparent 100%);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.04em;
+}
+
+/* ── Floral divider ── */
+.floral-divider {
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--rose);
+  font-size: 1rem;
+  letter-spacing: 1em;
+  opacity: 0.55;
+}
+
+/* ── Quotes ── */
+.quotes-section {
+  background: var(--cream);
+  padding: 4rem 1.5rem;
+}
+.quotes-header { text-align: center; margin-bottom: 2.2rem; }
+
+.quote-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.quote-card {
+  background: var(--petal);
+  border: 1px solid rgba(228,160,176,0.3);
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem 1.5rem;
+  position: relative;
+}
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  line-height: 0.45;
+  color: var(--rose);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.quote-author {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--deep-rose);
+}
+.quote-rose {
+  position: absolute;
+  bottom: 1rem; right: 1.2rem;
+  font-size: 1rem; opacity: 0.38;
+}
+
+/* ── Video ── */
+.video-section {
+  padding: 4rem 1.5rem;
+  background: var(--ivory);
+  text-align: center;
+}
+.video-inner {
+  max-width: 340px;
+  margin: 0 auto;
+}
+.video-wrapper {
+  margin: 2rem auto 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(196,104,124,0.15);
+  background: var(--petal);
+  width: 100%;
+  aspect-ratio: 9/16;
+  max-height: 72svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-wrapper video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(170deg, #f5d0d8 0%, #fdf6f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228,160,176,0.2) 0%, transparent 70%);
+  bottom: -80px; right: -60px;
+}
+.footer-heart {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 1.4rem;
+  animation: heartbeat 2.2s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  30%       { transform: scale(1.18); }
+  60%       { transform: scale(1.09); }
+}
+.footer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.2;
+}
+.footer-title strong {
+  color: var(--deep-rose);
+  font-weight: 600;
+  display: block;
+}
+.footer-line {
+  width: 55px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rose), transparent);
+  margin: 1.8rem auto;
+}
+.footer-note {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="petals-canvas" id="petals"></div>
+
+<div class="page">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <p class="hero-eyebrow">✦ A celebration of you ✦</p>
+    <h1 class="hero-title">
+      Happy<br>
+      <em>Birthday</em>
+    </h1>
+    <p class="hero-name">Sadiya</p>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">May your day be as beautiful as you are</p>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── PERSONAL MESSAGE ── -->
+  <div class="message-section reveal">
+    <p class="section-label">✦ From the heart ✦</p>
+    <p class="message-text">
+      On this beautiful day, I want you to know how deeply loved you are.
+      Every moment with you feels like the softest dream I never want to wake from.
+      You are my favorite hello, and my hardest goodbye —
+      today, the whole universe celebrates the day you came into it,
+      and I celebrate the day you came into mine.
+    </p>
+    <p class="message-sign">— Forever yours, with all my love</p>
+  </div>
+
+  <!-- ── PHOTO STORY ── -->
+  <section class="gallery-section">
+    <div class="gallery-header reveal">
+      <p class="section-label">✦ Our story ✦</p>
+      <h2 class="section-title">Moments <em>I treasure</em></h2>
+    </div>
+
+    <div class="photo-stack">
+
+      <div class="photo-frame reveal">
+        <img src="images/birthday/1.jpg" alt="A beautiful memory together" loading="lazy">
+        <div class="photo-caption">The beginning of everything ✦</div>
+      </div>
+
+      <div class="photo-frame reveal">
+        <img src="images/birthday/2.jpg" alt="A candid moment" loading="lazy">
+        <div class="photo-caption">My favorite smile in the world</div>
+      </div>
+
+      <div class="photo-frame reveal">
+        <img src="images/birthday/3.jpg" alt="A special moment" loading="lazy">
+        <div class="photo-caption">A day I'll never forget</div>
+      </div>
+
+      <div class="photo-frame reveal">
+        <img src="images/birthday/4.jpg" alt="Together" loading="lazy">
+        <div class="photo-caption">You make every place feel like home</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="floral-divider">🌸 🌹 🌷</div>
+
+  <!-- ── ROMANTIC QUOTES ── -->
+  <section class="quotes-section">
+    <div class="quotes-header reveal">
+      <p class="section-label">✦ Words that speak of you ✦</p>
+      <h2 class="section-title">Love, <em>in every language</em></h2>
+    </div>
+
+    <div class="quote-scroll">
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Whatever our souls are made of, his and mine are the same.</p>
+        <p class="quote-author">— Emily Brontë</p>
+        <span class="quote-rose">🌸</span>
+      </div>
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">I love you not only for what you are, but for what I am when I am with you.</p>
+        <p class="quote-author">— Roy Croft</p>
+        <span class="quote-rose">🌹</span>
+      </div>
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.</p>
+        <p class="quote-author">— Maya Angelou</p>
+        <span class="quote-rose">🌸</span>
+      </div>
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">You are my sun, my moon, and all of my stars.</p>
+        <p class="quote-author">— E.E. Cummings</p>
+        <span class="quote-rose">✨</span>
+      </div>
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">If I know what love is, it is because of you.</p>
+        <p class="quote-author">— Hermann Hesse</p>
+        <span class="quote-rose">🌷</span>
+      </div>
+
+      <div class="quote-card reveal">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">The best thing to hold onto in life is each other.</p>
+        <p class="quote-author">— Audrey Hepburn</p>
+        <span class="quote-rose">🌸</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section class="video-section">
+    <div class="video-inner reveal">
+      <p class="section-label">✦ A memory in motion ✦</p>
+      <h2 class="section-title">Us, <em>together</em></h2>
+      <div class="video-wrapper">
+        <video
+          src="videos/birthday/memory.mp4"
+          controls
+          playsinline
+          preload="metadata"
+          poster="images/birthday/1.jpg"
+        ></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <span class="footer-heart">♥</span>
+    <h2 class="footer-title">
+      Happy Birthday,
+      <strong>my love</strong>
+    </h2>
+    <div class="footer-line"></div>
+    <p class="footer-note">Today, tomorrow &amp; always — you are cherished</p>
+  </footer>
+
+</div>
+
+<script>
+// ── Petals ──
+const canvas = document.getElementById('petals');
+const petalColors = ['#f9ccd4','#f5b8c6','#fddde6','#e8a0b0','#fce4ec','#f0c8d4'];
+const petalSizes  = [8, 11, 14, 17, 10];
+for (let i = 0; i < 22; i++) {
+  const p = document.createElement('div');
+  p.className = 'petal';
+  const s = petalSizes[i % petalSizes.length];
+  p.style.cssText =
+    'left:' + (Math.random() * 100) + '%;' +
+    'width:' + s + 'px;' +
+    'height:' + Math.round(s * 0.65) + 'px;' +
+    'background:' + petalColors[Math.floor(Math.random() * petalColors.length)] + ';' +
+    'animation-duration:' + (9 + Math.random() * 13) + 's;' +
+    'animation-delay:' + (Math.random() * 18) + 's;';
+  canvas.appendChild(p);
+}
+
+// ── Scroll reveal ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach((e, idx) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), idx * 70);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
